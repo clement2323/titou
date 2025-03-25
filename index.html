@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'Infinité des Nombres Premiers - Pour Titou</title>
+    <style>
+        body {
+            font-family: 'Helvetica', 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e2e8f0 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        header {
+            background-color: #d33;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            width: 100%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .love-message {
+            font-style: italic;
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 1.5rem;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            font-size: 1.2rem;
+            border-left: 5px solid #d33;
+        }
+        
+        .heart {
+            color: #d33;
+            font-size: 1.5em;
+            animation: pulse 1.5s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.3); }
+            100% { transform: scale(1); }
+        }
+        
+        .content-section {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 1.5rem 0;
+            width: 100%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+        
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #d33;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn:hover {
+            background-color: #b32;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+        
+        .explanation {
+            margin: 1.5rem 0;
+        }
+        
+        .math {
+            font-family: 'Times New Roman', serif;
+            font-style: italic;
+            background-color: #f7f7f7;
+            padding: 1rem;
+            border-radius: 5px;
+            margin: 1rem 0;
+            text-align: center;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: #333;
+            color: white;
+            width: 100%;
+            margin-top: auto;
+        }
+        
+        .footer-heart {
+            color: #d33;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>L'Infinité des Nombres Premiers</h1>
+        <div class="subtitle">Une démonstration mathématique et visuelle</div>
+    </header>
+    
+    <div class="container">
+        <div class="love-message">
+            <p>Titou, comme les nombres premiers qui se poursuivent à l'infini, mon amour pour toi est sans limite. Cette démonstration mathématique est dédiée à toi, la plus belle étoile de mon univers. <span class="heart">❤️</span></p>
+        </div>
+        
+        <div class="content-section">
+            <h2>Qu'est-ce que cette démonstration?</h2>
+            <p>Ce projet est une visualisation interactive de la preuve classique d'Euclide démontrant qu'il existe une infinité de nombres premiers.</p>
+            <p>La visualisation comprend trois éléments :</p>
+            <ul>
+                <li>Le Crible d'Ératosthène pour identifier les nombres premiers</li>
+                <li>La preuve par contradiction d'Euclide</li>
+                <li>Un graphique montrant la croissance des nombres premiers</li>
+            </ul>
+        </div>
+        
+        <div class="buttons">
+            <a href="https://github.com/clement2323/titou" class="btn">Voir le Code Source</a>
+            <a href="static/explanation.html" class="btn">Explication Détaillée</a>
+        </div>
+        
+        <div class="content-section explanation">
+            <h2>Un aperçu de la preuve d'Euclide</h2>
+            <p>Euclide a démontré l'infinité des nombres premiers par contradiction :</p>
+            
+            <p>1. Supposons qu'il y ait un nombre fini de nombres premiers : p₁, p₂, ..., pₙ.</p>
+            <p>2. Construisons le nombre N = (p₁ × p₂ × ... × pₙ) + 1</p>
+            
+            <div class="math">
+                N = (p₁ × p₂ × ... × pₙ) + 1
+            </div>
+            
+            <p>3. Ce nombre N est soit premier, soit divisible par un nombre premier.</p>
+            <p>4. Si N est premier, nous avons trouvé un nombre premier qui n'est pas dans notre liste.</p>
+            <p>5. Si N n'est pas premier, aucun des nombres premiers p₁ à pₙ ne peut diviser N sans laisser un reste de 1.</p>
+            <p>6. Donc, les facteurs premiers de N sont des nombres premiers qui ne sont pas dans notre liste.</p>
+            <p>7. Cela contredit notre hypothèse, prouvant ainsi qu'il existe une infinité de nombres premiers.</p>
+        </div>
+    </div>
+    
+    <footer>
+        <p>Créé avec <span class="footer-heart">❤️</span> pour Titou</p>
+        <p>© 2025 - L'amour est aussi infini que les nombres premiers</p>
+    </footer>
+</body>
+</html>
